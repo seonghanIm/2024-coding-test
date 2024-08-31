@@ -1,12 +1,32 @@
 package com.company;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.*;
+
 public class Main {
 
-    public static void main(String[] args) {
-	 programmers programmers = new programmers();
-	 int[] bandage = {1,1,1};
-	 int health = 5;
-	 int [][] attacks = {{1,2},{3,2}};
-		System.out.println(programmers.solution(bandage,health,attacks));
+    public static void main(String[] args) throws IOException {
+//    	BaekJoon baekJoon = new BaekJoon();
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		int person = Integer.parseInt(br.readLine());
+		StringTokenizer st = new StringTokenizer(br.readLine());
+		List<Integer> list = new ArrayList<>();
+		for(int i = 0 ; i < person; i++){
+			list.add(Integer.parseInt(st.nextToken()));
+		}
+		System.out.println(ATM_11399(person,list));
     }
+
+	public static int ATM_11399(int person, List<Integer> list) {
+		int answer = 0;
+		int sum = 0;
+		Collections.sort(list);
+		for (int i = 0; i < person; i++) {
+			answer = answer + sum + list.get(i);
+			sum += list.get(i);
+		}
+		return answer;
+	}
 }

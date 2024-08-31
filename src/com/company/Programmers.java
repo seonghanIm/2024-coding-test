@@ -1,6 +1,6 @@
 package com.company;
 
-public class programmers {
+public class Programmers {
     // bandage 시전시간, 초당 회복량, 추가회복량
     // health 최대 체력
     // attacks 공격시간,피해량
@@ -16,7 +16,7 @@ public class programmers {
             if (currentTime == attacks[attackIndex][0]) {
                 sucessTime = 0;
                 health -= attacks[attackIndex][1];
-                if(health <= 0){
+                if (health <= 0) {
                     return -1;
                 }
                 attackIndex++;
