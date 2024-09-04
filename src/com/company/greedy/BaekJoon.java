@@ -1,4 +1,4 @@
-package com.company;
+package com.company.greedy;
 
 import java.util.Arrays;
 import java.util.Collections;
