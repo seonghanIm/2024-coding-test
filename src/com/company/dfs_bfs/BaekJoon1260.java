@@ -24,12 +24,14 @@ public class BaekJoon1260 {
         check = new boolean[N + 1][N + 1];
         boolean[][] v2 = new boolean[N + 1][N + 1];
 
-        for (int i = 0; i < M; i++) {
+        for (int i = 0; i <= M; i++) {
             st = new StringTokenizer(br.readLine());
             int a = Integer.parseInt(st.nextToken());
             int b = Integer.parseInt(st.nextToken());
             check[a][b] = check[b][a] = true;
         }
+
+
 
         dfs(V);
         System.out.println();
