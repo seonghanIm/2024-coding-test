@@ -1,4 +1,4 @@
-package com.company.Nsuslab;
+package com.company.test;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.company.Nsuslab;
+package com.company.test;
 
 public class Problem1 {
     public static void main(String[] args) {
