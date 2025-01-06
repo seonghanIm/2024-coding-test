@@ -1,21 +1,26 @@
 package com.company.study;
 
 import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class BaekJoon_1463 {
-    // 10    1 * 3 = 3 / 3 * 3 = 9 / 9 + 1 = 10
+    // 3 1 *3 4
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
+        int x = Integer.parseInt(br.readLine());
 
-    public static void main(String[] args){
-        BufferedReader br = new BufferedReader();
+        int dp[] = new int[x + 1];
 
+        dp[0] = dp[1] = 0;
 
-        while(true){
-            1 * 3 < N
-                    num =
-                    continue
+        for (int i = 2; i <= x; i++) {
+            dp[i] = dp[i - 1] + 1;
+            if (i % 2 == 0) dp[i] = Math.min(dp[i], dp[i / 2] + 1);
+            if (i % 3 == 0) dp[i] = Math.min(dp[i], dp[i / 3] + 1);
         }
+
+        System.out.println(dp[x]);
     }
-
-
 }
